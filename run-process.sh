@@ -5,8 +5,7 @@ if [ -f "config.sh" ]; then
     . config.sh 
 else
     echo 'Arquivo de configuração "config.sh" não encontrado.'
-exit
-
+    exit
 fi
 
 #Grava o numero total de linhas da listagem atual
@@ -75,7 +74,7 @@ cat >>mensagem.txt<<!
 
 Por favor, verificar/corrigir o(s) script(s) e efetuar o reprocessamento.
 
-Source: https://github.com/scieloorg
+Source: https://github.com/scieloorg/journals-list
 
 Processamento SciELO
 
