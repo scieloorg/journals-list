@@ -1,1 +1,1 @@
-articlemetaapi==1.6.15
+articlemetaapi==1.6.16
