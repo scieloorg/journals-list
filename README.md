@@ -8,4 +8,4 @@ Get de list of journals for use by the marking team.
 [![Python 3](https://pyup.io/repos/github/scieloorg/journals-list/python-3-shield.svg)](https://pyup.io/repos/github/scieloorg/journals-list/)
 
 #Requirements
-articlemetaapi==1.6.15
+articlemetaapi==1.8.16
