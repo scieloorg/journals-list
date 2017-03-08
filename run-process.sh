@@ -9,12 +9,12 @@ else
 fi
 
 #Grava o numero total de linhas da listagem atual
-nl=$(wc -l titles-tab-utf-8.csv | cut -d' ' -f1)
+nl=$(wc -l csv/titles-tab-utf-8.csv | cut -d' ' -f1)
 echo $nl > nl.txt
 
 cd $dir_trab
 
-source $dir_trab/$path_venv/bin/activate
+source $path_venv/bin/activate
 
 #Elimina arquivo error-log.txt
 if [ -f "error-log.txt" ] ; then 
@@ -22,30 +22,23 @@ if [ -f "error-log.txt" ] ; then
     touch error-log.txt
 fi
 
-#Versao 1
-python journal-tab-v1.py | grep "Error" > error-log.txt
+#Executa o script
+python3 journals-list.py | grep "Error" > error-log.txt
 wait
 
-#Versao 2
-python journal-tab-v2.py | grep Erro >> error-log.txt
-wait
-
-#Versao 3
-python journal-tab-v3.py | grep Erro >> error-log.txt
-wait
 
 #Permissao de leitura
-chmod 644 titles-tab-utf-8.csv
-chmod 644 markup_journals.csv
-chmod 644 titles-tab-v2-utf-8.csv
-chmod 644 markup_journals_v2.csv
-chmod 644 titles-tab-v3-utf-8.csv
-chmod 644 markup_journals_v3.csv
+chmod 644 csv/titles-tab-utf-8.csv
+chmod 644 csv/markup_journals.csv
+chmod 644 csv/titles-tab-v2-utf-8.csv
+chmod 644 csv/markup_journals_v2.csv
+chmod 644 csv/titles-tab-v3-utf-8.csv
+chmod 644 csv/markup_journals_v3.csv
 
 deactivate
 
 #Verifica o tamanho do arquivo e copia para servidor
-if [ "$(cat titles-tab-utf-8.csv | wc -l)" -ge "$nl" ] && [ "$(cat error-log.txt | wc -l)" -lt 1 ]
+if [ "$(cat csv/titles-tab-utf-8.csv | wc -l)" -ge "$nl" ] && [ "$(cat error-log.txt | wc -l)" -lt 1 ]
 then
     echo "Arquivo maior ou igual ao anterior. Enviando para Orfeu..."
     #copia versao 1
