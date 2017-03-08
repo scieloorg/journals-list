@@ -8,5 +8,5 @@ __pycache__/
 csv/
 
 # Config files
-config.py
+config.dev.sh
 config.sh
