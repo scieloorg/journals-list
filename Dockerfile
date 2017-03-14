@@ -1,4 +1,4 @@
-FROM python:3.5.3-slim
+FROM python:3.5.3
 LABEL manintainer "ednilson.gesseff@scielo.org"
 
 COPY . /app 
