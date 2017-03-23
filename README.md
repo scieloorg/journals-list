@@ -1,5 +1,5 @@
 # Journals-list
-Get de list of journals for use by the marking team.
+This script produces a list of SciELO journals for use by the marking team.
 
 
 # Badges
