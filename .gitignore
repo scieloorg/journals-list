@@ -7,10 +7,6 @@ __pycache__/
 # Directories
 csv/
 
-# Config files
-config.dev.sh
-config.sh
-
 # Log files
 error-log.txt
 nl.txt
