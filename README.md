@@ -9,7 +9,7 @@ This script produces a list of SciELO journals for use by the marking team.
 
 
 # Requirements
-articlemetaapi==1.11.16
+articlemetaapi==1.19.0
 
 # Execution and logs by Rancher 
 [rancher.scielo.org](http://rancher.scielo.org)
